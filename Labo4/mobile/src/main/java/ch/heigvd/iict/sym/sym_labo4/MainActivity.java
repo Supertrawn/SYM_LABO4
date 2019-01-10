@@ -13,15 +13,17 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         findViewById(R.id.main_btn_notification).setOnClickListener(new View.OnClickListener() {
-            @Override public void onClick(View view) {
+            @Override
+            public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this, NotificationActivity.class));
             }
         });
 
         findViewById(R.id.main_btn_application).setOnClickListener(new View.OnClickListener() {
-            @Override public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this, WearSynchronizedActivity.class));
-            }
+           @Override
+           public void onClick(View v){
+               startActivity(new Intent(MainActivity.this, WearSynchronizedActivity.class));
+           }
         });
     }
 

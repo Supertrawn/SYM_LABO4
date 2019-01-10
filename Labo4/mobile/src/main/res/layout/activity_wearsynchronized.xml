@@ -12,4 +12,56 @@
 
     <!-- A IMPLEMENTER -->
 
+    <SeekBar
+        android:id="@+id/redSeekBar"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_above="@+id/greenSeekBar"
+        android:layout_centerHorizontal="true"
+        android:background="@color/white"
+        android:fadeScrollbars="true"
+        android:max="255"
+        android:progress="64"
+        android:progressTint="@color/red_900"
+        android:thumbTint="@color/red_900" />
+
+    <SeekBar
+        android:id="@+id/greenSeekBar"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:background="@color/white"
+        android:max="255"
+        android:progress="128"
+        android:progressTint="@color/green_900"
+        android:thumbTint="@color/green_900" />
+
+    <SeekBar
+        android:id="@+id/blueSeekBar"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_below="@+id/greenSeekBar"
+        android:layout_centerHorizontal="true"
+        android:background="@color/white"
+        android:max="255"
+        android:progress="194"
+        android:progressTint="@color/blue_900"
+        android:thumbTint="@color/blue_900"
+        app:tickMarkTint="@color/blue_900" />
+
+
+    <SeekBar
+        android:id="@+id/greySeekBar"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_below="@+id/blueSeekBar"
+        android:layout_centerHorizontal="true"
+        android:background="@color/white"
+        android:max="255"
+        android:progress="194"
+        android:progressTint="@color/grey_900"
+        android:thumbTint="@color/grey_900"
+        app:tickMarkTint="@color/grey_900" />
+
 </RelativeLayout>

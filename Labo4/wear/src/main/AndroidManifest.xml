@@ -24,6 +24,8 @@
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
+                <action android:name="com.google.android.gms.wearable.DATA_CHANGED" />
+                <data android:scheme="mobile" android:host="*" android:pathPrefix="/data"/>
             </intent-filter>
         </activity>
 
