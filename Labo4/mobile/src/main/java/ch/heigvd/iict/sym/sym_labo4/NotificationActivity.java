@@ -23,9 +23,9 @@ public class NotificationActivity extends AppCompatActivity {
     private static final int NOTIFICATION_ACTION_ID_NO = 22;
     private static final int NOTIFICATION_ACTION_ID_MAYBE = 23;
     private static final int NOTIFICATION_WEARABLE_ID = 3;
-    private static final int NOTIFICATION_WEARABLE_ID_END = 3;
-    private static final int NOTIFICATION_WEARABLE_ID_CONTINUE = 3;
-    private static final int NOTIFICATION_WEARABLE_ID_CALL = 3;
+    private static final int NOTIFICATION_WEARABLE_ID_END = 31;
+    private static final int NOTIFICATION_WEARABLE_ID_CONTINUE = 32;
+    private static final int NOTIFICATION_WEARABLE_ID_CALL = 33;
 
 
     private static final String CHANNEL_ID = "labo4";
@@ -135,8 +135,7 @@ public class NotificationActivity extends AppCompatActivity {
                             .addAction(callAction));
 
             // Get an instance of the NotificationManager service
-            NotificationManagerCompat notificationManager =
-                    NotificationManagerCompat.from(getApplicationContext());
+            NotificationManagerCompat notificationManager = NotificationManagerCompat.from(getApplicationContext());
             // Issue the notification with notification manager.
             notificationManager.notify(NOTIFICATION_WEARABLE_ID, notificationBuilder.build());
         });
@@ -200,7 +199,7 @@ public class NotificationActivity extends AppCompatActivity {
     }
 
     private PendingIntent createPendingIntentWearable(int requestCode, String message) {
-        return createPendingIntent(requestCode, message, Constants.MY_PENDING_INTENT_ACTION_ACTIONS);
+        return createPendingIntent(requestCode, message, Constants.MY_PENDING_INTENT_ACTION_WEARABLE);
     }
 
 }
